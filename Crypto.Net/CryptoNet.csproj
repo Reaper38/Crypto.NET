@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C99FD931-AC03-465A-B8A9-C4A665BBAA0E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CryptoNet</RootNamespace>
+    <AssemblyName>CryptoNet</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\CryptoDotNet.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\CryptoNet.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.1.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsymmetricAlgorithm\DiffieHellman.cs" />
+    <Compile Include="AsymmetricAlgorithm\DiffieHellmanManaged.cs" />
+    <Compile Include="AsymmetricAlgorithm\RSASimple.cs" />
+    <Compile Include="AsymmetricAlgorithm\Utilities\DHKeyGeneration.cs" />
+    <Compile Include="AsymmetricAlgorithm\Utilities\DHParameters.cs" />
+    <Compile Include="AsymmetricAlgorithm\Utilities\Generator\NextPrimeFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AsymmetricAlgorithm\Utilities\MiniParser.cs" />
+    <Compile Include="AsymmetricAlgorithm\Utilities\SecurityParser.cs" />
+    <Compile Include="HashAlgorithm\KeyStrengthening.cs" />
+    <Compile Include="HashAlgorithm\SecurePasswordHash.cs" />
+    <Compile Include="AsymmetricAlgorithm\Utilities\BigInteger.cs" />
+    <Compile Include="AsymmetricAlgorithm\Utilities\ConfidenceFactor.cs" />
+    <Compile Include="AsymmetricAlgorithm\Utilities\Generator\PrimeGeneratorBase.cs" />
+    <Compile Include="AsymmetricAlgorithm\Utilities\Generator\SequentialSearchPrimeGeneratorBase.cs" />
+    <Compile Include="AsymmetricAlgorithm\Utilities\PrimalityTests.cs" />
+    <Compile Include="AsymmetricAlgorithm\RSAManaged.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\ARC4Managed.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\CryptoConvert.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\CryptoTools.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\KeyPairPersistence.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\MD2.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\MD2Managed.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\MD4.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\MD4Managed.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\MD5SHA1.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\PKCS1.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\PKCS8.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\RC4.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\SHA224.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\SHA224Managed.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Cryptography\TlsHMAC.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsClientCertificate.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsClientCertificateVerify.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsClientFinished.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsClientHello.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsClientKeyExchange.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsServerCertificate.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsServerCertificateRequest.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsServerFinished.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsServerHello.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsServerKeyExchange.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsClientCertificate.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsClientCertificateVerify.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsClientFinished.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsClientHello.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsClientKeyExchange.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsServerCertificate.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsServerCertificateRequest.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsServerFinished.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsServerHello.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsServerKeyExchange.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake\ClientCertificateType.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake\HandshakeMessage.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake\HandshakeType.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\Alert.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\CipherAlgorithmType.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\CipherSuite.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\CipherSuiteCollection.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\CipherSuiteFactory.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\ClientContext.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\ClientRecordProtocol.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\ClientSessionCache.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\ContentType.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\Context.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\DebugHelper.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\ExchangeAlgorithmType.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\HandshakeState.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\HashAlgorithmType.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\HttpsClientStream.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\RecordProtocol.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\RSASslSignatureDeformatter.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\RSASslSignatureFormatter.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\SecurityCompressionType.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\SecurityParameters.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\SecurityProtocolType.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\ServerContext.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\ServerRecordProtocol.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\SslCipherSuite.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\SslHandshakeHash.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\SslServerStream.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\SslStreamBase.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\TlsCipherSuite.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\TlsClientSettings.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\TlsException.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\TlsServerSettings.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\TlsStream.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\AuthorityKeyIdentifierExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\BasicConstraintsExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\CertificatePoliciesExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\CRLDistributionPointsExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\ExtendedKeyUsageExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\GeneralNames.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\KeyAttributesExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\KeyUsageExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\NetscapeCertTypeExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\PrivateKeyUsagePeriodExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\SubjectAltNameExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509.Extensions\SubjectKeyIdentifierExtension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\PKCS12.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X501Name.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509Builder.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509Certificate.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509CertificateBuilder.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509CertificateCollection.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509Chain.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509ChainStatusFlags.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509CRL.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509Extension.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509Extensions.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509Store.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509StoreManager.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X509Stores.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.X509\X520Attributes.cs" />
+    <Compile Include="SSL\Mono\Mono.Security\ASN1.cs" />
+    <Compile Include="SSL\Mono\Mono.Security\ASN1Convert.cs" />
+    <Compile Include="SSL\Mono\Mono.Security\BitConverterLE.cs" />
+    <Compile Include="SSL\Mono\Mono.Security\PKCS7.cs" />
+    <Compile Include="SSL\Mono\Mono.Security\StrongName.cs" />
+    <Compile Include="nunit_testing\UnitTesting.cs" />
+    <Compile Include="Other\CryptRand.cs" />
+    <Compile Include="Other\SecureNetworkStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreamAlgorithm\StreamCipher.cs" />
+    <Compile Include="SymmetricAlgorithm\AESFinalists\Twofish.cs" />
+    <Compile Include="SymmetricAlgorithm\AESFinalists\Mars.cs" />
+    <Compile Include="SymmetricAlgorithm\AESFinalists\RijndaelOpen.cs" />
+    <Compile Include="SymmetricAlgorithm\AESFinalists\Serpent.cs" />
+    <Compile Include="SymmetricAlgorithm\StringCrypt.cs" />
+    <Compile Include="SymmetricAlgorithm\Utilities\RijndaelOpenManagedTransform.cs" />
+    <Compile Include="SymmetricAlgorithm\Utilities\SymmetricTransform.cs" />
+    <Compile Include="SymmetricAlgorithm\Blowfish.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HashAlgorithm\HMAC.cs" />
+    <Compile Include="Other\X509CertificateBuilder.cs" />
+    <Compile Include="SSL\Mono\Locale.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Client\TlsServerHelloDone.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls.Handshake.Server\TlsServerHelloDone.cs" />
+    <Compile Include="SSL\Mono\Mono.Security.Protocol.Tls\SslClientStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

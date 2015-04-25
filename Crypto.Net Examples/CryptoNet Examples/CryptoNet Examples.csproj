@@ -21,7 +21,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>$(SolutionDir)..\bin\debug\</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)..\intermediate\$(AssemblyName)\debug\</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -29,7 +30,8 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>$(SolutionDir)..\bin\release\</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)..\intermediate\$(AssemblyName)\release\</IntermediateOutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -37,7 +39,7 @@
   <ItemGroup>
     <Reference Include="CryptoNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Crypto.Net\bin\Release\CryptoNet.dll</HintPath>
+      <HintPath>$(SolutionDir)..\bin\release\CryptoNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
